@@ -83,6 +83,7 @@ table {
   padding: 1.3rem 0;
   border: 1px solid #D3D3D3;
   width: 100%;
+  margin-top: 8px;
 }
 
 #instagram-login-wrapper .container:nth-child(1){
@@ -91,8 +92,15 @@ table {
 .container .instagram-logo{
   height: 3rem;
 }
-.container .profile-foto img{
+.container .profile-foto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+  overflow: hidden;
+}
+.container .profile-foto img{
+  height: 7rem;
 }
 
 .container .button-continue{
@@ -128,10 +136,12 @@ table {
   padding: 1.3rem 0;
 }
 
-.get-the-app .dowload{
+.get-the-app .download{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  padding: 1rem;
 }
 
 .app-download{
@@ -146,4 +156,25 @@ table {
 
 .app-download:nth-child(2){
   background-image: url('./img/googleplay-button.png');
+}
+
+/*media queries*/
+@media (max-width: 1024px){
+  #instagram-wrapper{
+      width: 90%;  
+  }
+}
+@media (max-width: 650px){
+  body{
+    background-color: #FFFFFF;
+  }
+  #container-phone{
+    display: none;
+  }
+  #instagram-login-wrapper{
+    width: 100%;
+  }
+  #instagram-login-wrapper .container{
+    border: 1px solid transparent;
+  }
 }
